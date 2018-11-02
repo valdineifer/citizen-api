@@ -1,0 +1,11 @@
+{
+  "name": "cidadao-api",
+  "version": "1.0.0",
+  "description": "Desenvolvimento de uma API como meio de aprendizado",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Valdinei Ferreira",
+  "license": "ISC"
+}
