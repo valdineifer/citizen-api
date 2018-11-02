@@ -1,5 +1,9 @@
 # API - Cidadão
-Desenvolvimento de uma API como meio de aprendizado
+Este é uma API que criei como meio de aprendizado. Vi o escopo deste projeto em um grupo no Telegram e decidi fazê-lo para praticar o desenvolvimento de API com uso de:
+* MongoDB
+* NodeJS
+* Express
+* Mongoose (com Paginate)
 
 ## Projeto
 Desenvolvimento de API para manipular dados de cidadão.
