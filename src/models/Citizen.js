@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const mongPaginate = require('mongoose-paginate');
+const mongoose = require('mongoose')
+const mongPaginate = require('mongoose-paginate')
 
 const CitizenSchema = new mongoose.Schema({
     name: {
@@ -22,11 +22,19 @@ const CitizenSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    endereco: {
+    cep: {
         type: String,
         required: true
     },
-    cidade: {
+    address: {
+        type: String,
+        required: true
+    },
+    neighborhood: {
+        type: String,
+        required: true
+    },
+    city: {
         type: String,
         required: true
     },
@@ -36,5 +44,5 @@ const CitizenSchema = new mongoose.Schema({
     }
 });
 
-mongoose.plugin(mongPaginate);
-mongoose.model('Citizen', CitizenSchema);
+mongoose.plugin(mongPaginate)
+mongoose.model('Citizen', CitizenSchema)

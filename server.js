@@ -1,16 +1,16 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const requireDir = require('require-dir');
-const cors = require('cors');
+const express = require('express')
+const mongoose = require('mongoose')
+const requireDir = require('require-dir')
+const cors = require('cors')
 
-const app = express(); // Creates an express aplication
-app.use(express.json());
-app.use(cors());
+const app = express() // Creates an express aplication
+app.use(express.json())
+app.use(cors())
 
-mongoose.connect('mongodb://localhost:27017/cidadao-api', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost:27017/cidadao-api', { useNewUrlParser: true })
 
-requireDir('./src/models'); // Require every file on this directory
+requireDir('./src/models') // Require every file on this directory
 
-app.use('/api', require('./src/routes'));
+app.use('/api', require('./src/routes'))
 
-app.listen(3001);
+app.listen(3001)
