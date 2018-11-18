@@ -1,5 +1,5 @@
 # API - Cidadão
-Este é uma API que criei como meio de aprendizado. Vi o escopo deste projeto em um grupo no Telegram e decidi fazê-lo para praticar o desenvolvimento de API com uso de:
+Vi o escopo deste projeto em um grupo no Telegram e decidi fazê-lo para praticar o desenvolvimento de API com uso de:
 * MongoDB
 * NodeJS
 * Express
@@ -15,7 +15,7 @@ Desenvolvimento de API para manipular dados de cidadão.
 * Não permitir cadastrar cidadão com o mesmo CPF;
 * Com o CEP as informações de logradouro, bairro, cidade e uf devem ser buscadas no ViaCEP: https://viacep.com.br/ws/01001000/json/
 
-## Dicas:
+## Orientações:
  - A API pode ser REST ou GraphQL;
  - A escolha do armazenamento dos dados e a utilização ou não de frameworks ficam ao seu critério;
  - Trafegar JSON;
