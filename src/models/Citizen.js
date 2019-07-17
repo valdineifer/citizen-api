@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const mongPaginate = require('mongoose-paginate');
+const mongoose = require('mongoose')
+const mongPaginate = require('mongoose-paginate')
 
 const CitizenSchema = new mongoose.Schema({
   name: {
@@ -42,7 +42,7 @@ const CitizenSchema = new mongoose.Schema({
     type: String,
     required: true
   }
-});
+})
 
-mongoose.plugin(mongPaginate);
-mongoose.model('Citizen', CitizenSchema);
+mongoose.plugin(mongPaginate)
+mongoose.model('Citizen', CitizenSchema)
