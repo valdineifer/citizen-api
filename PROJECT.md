@@ -14,6 +14,7 @@ Desenvolvimento de API para manipular dados de cidadão.
 * [x] Permitir consultar um cidadão pelo CPF;
 * [x] Não permitir cadastrar cidadão com o mesmo CPF;
 * [x] Com o CEP as informações de logradouro, bairro, cidade e uf devem ser buscadas no ViaCEP: https://viacep.com.br/ws/01001000/json/
+* [x] Somente usuários autenticados podem adicionar, editar ou excluir dados
 
 ## Orientações:
  - A API pode ser REST ou GraphQL;
