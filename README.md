@@ -1,24 +1,78 @@
-# API - Cidadão
-Vi o escopo deste projeto em um grupo no Telegram e decidi fazê-lo para praticar o desenvolvimento de API com uso de:
-* MongoDB
-* NodeJS
-* Express
-* Mongoose (com Paginate)
+# Citizen API
 
-## Projeto
-Desenvolvimento de API para manipular dados de cidadão.
+## GET `api/citizen`
+Response: 
+```json
+{
+  "docs": [
+    {
+      "_id": "",
+      "name": "",
+      "lastName": "",
+      "cpf": "",
+      "email": "",
+      "phone": "",
+      "cep": "",
+      "address": "",
+      "neighborhood": "",
+      "city": "",
+      "uf": "",
+      "__v": 0
+    }
+  ],
+  "total": 1,
+  "limit": 10,
+  "page": 1,
+  "pages": 1
+}
+```
 
-## Requisitos:
-* Permitir gravar (inserir e atualizar) dados de cidadão com: nome, sobrenome, cpf, contatos (telefone, email e celular), endereço (cep, logradouro, bairro, cidade e uf);
-* Permitir consultar todos os cidadãos;
-* Permitir consultar um cidadão pelo CPF;
-* Não permitir cadastrar cidadão com o mesmo CPF;
-* Com o CEP as informações de logradouro, bairro, cidade e uf devem ser buscadas no ViaCEP: https://viacep.com.br/ws/01001000/json/
+## GET `api/citizen/:cpf`
+Response: 
+```json
+{
+  "_id": "",
+  "name": "",
+  "lastName": "",
+  "cpf": "",
+  "email": "",
+  "phone": "",
+  "cep": "",
+  "address": "",
+  "neighborhood": "",
+  "city": "",
+  "uf": "",
+  "__v": 0
+}
+```
 
-## Orientações:
- - A API pode ser REST ou GraphQL;
- - A escolha do armazenamento dos dados e a utilização ou não de frameworks ficam ao seu critério;
- - Trafegar JSON;
- - Documentação das requisições;
- - Testes;
- - Boas práticas de desenvolvimento;
+## POST `/api/citizen`
+| Params       | Type   | Description                       |
+|--------------|--------|-----------------------------------|
+| name         | String | -------                           |
+| lastName     | String | -------                           |
+| cpf          | String | 11 digits, without symbols        |
+| email        | String |                                   |
+| phone        | String | min: 10, max: 11; without symbols |
+| cep          | String | only numbers, 8 digits            |
+| address      | String | -------                           |
+| neighborhood | String | -------                           |
+| city         | String | -------                           |
+| uf           | String | Two letters, a state of Brazil    |
+
+## PUT `api/citizen/:cpf`
+| Params       | Type   | Description                       |
+|--------------|--------|-----------------------------------|
+| name         | String | -------                           |
+| lastName     | String | -------                           |
+| cpf          | String | 11 digits, without symbols        |
+| email        | String |                                   |
+| phone        | String | min: 10, max: 11; without symbols |
+| cep          | String | only numbers, 8 digits            |
+| address      | String | -------                           |
+| neighborhood | String | -------                           |
+| city         | String | -------                           |
+| uf           | String | Two letters, a state of Brazil    |
+
+## DELETE `api/citizen/:cpf`
+Response: `200`
