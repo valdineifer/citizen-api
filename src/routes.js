@@ -10,7 +10,7 @@ routes.get('/citizen/:cpf', CitizenController.show)
 routes.put('/citizen/:cpf', AuthMiddleware, CitizenController.update)
 routes.delete('/citizen/:cpf', AuthMiddleware, CitizenController.destroy)
 
-routes.post('/auth/register', AuthController.register)
+// routes.post('/auth/register', AuthController.register)
 routes.post('/auth/authenticate', AuthController.login)
 
 module.exports = routes
