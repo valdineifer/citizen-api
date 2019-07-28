@@ -1,4 +1,5 @@
 # Citizen API
+URL: https://vf-citizen-api.herokuapp.com/
 
 ## GET `api/citizen`
 Response: 
@@ -55,10 +56,6 @@ Response:
 | email        | String |                                   |
 | phone        | String | min: 10, max: 11; without symbols |
 | cep          | String | only numbers, 8 digits            |
-| address      | String | -------                           |
-| neighborhood | String | -------                           |
-| city         | String | -------                           |
-| uf           | String | Two letters, a state of Brazil    |
 
 ## PUT `api/citizen/:cpf`
 | Params       | Type   | Description                       |
@@ -69,10 +66,6 @@ Response:
 | email        | String |                                   |
 | phone        | String | min: 10, max: 11; without symbols |
 | cep          | String | only numbers, 8 digits            |
-| address      | String | -------                           |
-| neighborhood | String | -------                           |
-| city         | String | -------                           |
-| uf           | String | Two letters, a state of Brazil    |
 
 ## DELETE `api/citizen/:cpf`
-Response: `200`
+Response: `204 - No Content`
